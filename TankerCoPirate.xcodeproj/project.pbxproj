@@ -13,6 +13,9 @@
 		152349C225B61E27001B8E33 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 152349C125B61E27001B8E33 /* Preview Assets.xcassets */; };
 		152349CD25B61E27001B8E33 /* TankerCoPirateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152349CC25B61E27001B8E33 /* TankerCoPirateTests.swift */; };
 		152349D825B61E27001B8E33 /* TankerCoPirateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152349D725B61E27001B8E33 /* TankerCoPirateUITests.swift */; };
+		152349F125B61EB2001B8E33 /* PDFViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152349F025B61EB2001B8E33 /* PDFViewWrapper.swift */; };
+		152349F625B61EE3001B8E33 /* DocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152349F525B61EE3001B8E33 /* DocumentView.swift */; };
+		152349FB25B61EF7001B8E33 /* NARC.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 152349FA25B61EF7001B8E33 /* NARC.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		152349D325B61E27001B8E33 /* TankerCoPirateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TankerCoPirateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		152349D725B61E27001B8E33 /* TankerCoPirateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TankerCoPirateUITests.swift; sourceTree = "<group>"; };
 		152349D925B61E27001B8E33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		152349F025B61EB2001B8E33 /* PDFViewWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFViewWrapper.swift; sourceTree = "<group>"; };
+		152349F525B61EE3001B8E33 /* DocumentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentView.swift; sourceTree = "<group>"; };
+		152349FA25B61EF7001B8E33 /* NARC.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = NARC.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +101,10 @@
 		152349B925B61E25001B8E33 /* TankerCoPirate */ = {
 			isa = PBXGroup;
 			children = (
+				152349F025B61EB2001B8E33 /* PDFViewWrapper.swift */,
+				152349FA25B61EF7001B8E33 /* NARC.pdf */,
 				152349BA25B61E25001B8E33 /* TankerCoPirateApp.swift */,
+				152349F525B61EE3001B8E33 /* DocumentView.swift */,
 				152349BC25B61E25001B8E33 /* ContentView.swift */,
 				152349BE25B61E27001B8E33 /* Assets.xcassets */,
 				152349C325B61E27001B8E33 /* Info.plist */,
@@ -233,6 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				152349FB25B61EF7001B8E33 /* NARC.pdf in Resources */,
 				152349C225B61E27001B8E33 /* Preview Assets.xcassets in Resources */,
 				152349BF25B61E27001B8E33 /* Assets.xcassets in Resources */,
 			);
@@ -259,8 +269,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				152349F125B61EB2001B8E33 /* PDFViewWrapper.swift in Sources */,
 				152349BD25B61E25001B8E33 /* ContentView.swift in Sources */,
 				152349BB25B61E25001B8E33 /* TankerCoPirateApp.swift in Sources */,
+				152349F625B61EE3001B8E33 /* DocumentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
