@@ -9,12 +9,25 @@ import PDFKit
 
 struct DocumentView: View {
     var pdfView: PDFViewUI!
-
+    @State private var routeText = "ROUTE"
+    @EnvironmentObject var modelData : ModelData
+    
     var body: some View {
+        NavigationView{
         VStack {
+            ZStack{
+                TextEditor(text:$modelData.routeText)
+                    .textCase(.uppercase)
+                    .frame(height:100)
+                    .padding(10)
+                
+            }
             pdfView
-            Button("Done", action: {})
+            NavigationLink(destination:CoordinateList()){
+                Text("Add Points")
+            }
         }
+        }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

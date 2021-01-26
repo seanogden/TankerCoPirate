@@ -10,6 +10,7 @@ import PDFKit
 
 struct PDFViewUI : UIViewRepresentable {
 
+    @EnvironmentObject var modelData : ModelData
     let pdfView = PDFView()
     var url: URL?
     init(url : URL) {
@@ -22,14 +23,14 @@ struct PDFViewUI : UIViewRepresentable {
             pdfView.document = PDFDocument(url: url)
         }
 
-        //pdfView.autoScales = true
+        pdfView.autoScales = true
         pdfView.displayDirection = .vertical
         drawLine()
         return pdfView
     }
 
     func updateUIView(_ uiView: UIView, context: Context) {
-        // Empty
+        drawLine()
     }
     
     func drawLine() {
@@ -42,23 +43,43 @@ struct PDFViewUI : UIViewRepresentable {
         //path.addLine(to:CGPoint(x:2800,y:1983))
         
         //move the cursor to the edge of the margin on the bottom left.
-        path.move(to:CGPoint(x:18,y:18))
+        //path.move(to:CGPoint(x:18,y:18))
         //draw a line to 40W/40N
-        path.addLine(to:zeroizeNarc(lambert(longitude:-40.0, latitude:40.0)))
-        
-        
+        //path.addLine(to:zeroizeNarc(lambert(longitude:-40.0, latitude:40.0)))
+        for coord : CGPoint in modelData.routeCoords {
+            let loc : CGPoint = zeroizeNarc(lambert(longitude:Double(coord.x), latitude:Double(coord.y)))
+            path.addLine(to:loc)
+            path.move(to:loc)
+        }
         //Set up an annotation object to put our line, and then add to the page
         let page = pdfView.currentPage!
-        print(page.bounds(for:.mediaBox))
         
+        for a in page.annotations {
+            page.removeAnnotation(a)
+        }
+        
+        print(page.bounds(for:.mediaBox))
+
         let border = PDFBorder()
-        border.lineWidth = 2.0 // Set your line width here
+        border.lineWidth = 6.0 // Set your line width here
         let annotation = PDFAnnotation(bounds: page.bounds(for: pdfView.displayBox), forType: .ink, withProperties: nil)
         annotation.color = .red
         annotation.border = border
         annotation.add(path)
-        
         page.addAnnotation(annotation)
+        //pdfView.usePageViewController(false)
+        //pdfView.scaleFactor = pdfView.scaleFactorForSizeToFit * 2
+        //print(annotation.bounds)
+        /*print(path.bounds)
+        print (page.bounds(for:pdfView.displayBox).width)
+        print (path.bounds.width)
+        if path.bounds.width == 0 { return }
+        let xscale = page.bounds(for:pdfView.displayBox).width / (path.bounds.width)
+        print (xscale)
+        pdfView.scaleFactor = pdfView.scaleFactorForSizeToFit * xscale / 1.5
+        pdfView.go(to:path.bounds.offsetBy(dx:40,dy:100), on:page)
+        print(pdfView.bounds)*/
+        
     }
 
 }

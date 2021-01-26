@@ -16,6 +16,11 @@
 		152349F125B61EB2001B8E33 /* PDFViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152349F025B61EB2001B8E33 /* PDFViewWrapper.swift */; };
 		152349F625B61EE3001B8E33 /* DocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152349F525B61EE3001B8E33 /* DocumentView.swift */; };
 		152349FB25B61EF7001B8E33 /* NARC.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 152349FA25B61EF7001B8E33 /* NARC.pdf */; };
+		15234A0025B62D45001B8E33 /* CoordinateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152349FF25B62D45001B8E33 /* CoordinateRow.swift */; };
+		15C6147225B66DFA00C7D1E3 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C6147125B66DFA00C7D1E3 /* ModelData.swift */; };
+		15C6147A25B67FC800C7D1E3 /* GPSCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C6147925B67FC800C7D1E3 /* GPSCoordinate.swift */; };
+		15C6147F25B7629F00C7D1E3 /* CoordinateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C6147E25B7629F00C7D1E3 /* CoordinateList.swift */; };
+		15C6148425B76D6600C7D1E3 /* LocationTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C6148325B76D6600C7D1E3 /* LocationTime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,11 @@
 		152349F025B61EB2001B8E33 /* PDFViewWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFViewWrapper.swift; sourceTree = "<group>"; };
 		152349F525B61EE3001B8E33 /* DocumentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentView.swift; sourceTree = "<group>"; };
 		152349FA25B61EF7001B8E33 /* NARC.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = NARC.pdf; sourceTree = "<group>"; };
+		152349FF25B62D45001B8E33 /* CoordinateRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateRow.swift; sourceTree = "<group>"; };
+		15C6147125B66DFA00C7D1E3 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		15C6147925B67FC800C7D1E3 /* GPSCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSCoordinate.swift; sourceTree = "<group>"; };
+		15C6147E25B7629F00C7D1E3 /* CoordinateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateList.swift; sourceTree = "<group>"; };
+		15C6148325B76D6600C7D1E3 /* LocationTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTime.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				152349F025B61EB2001B8E33 /* PDFViewWrapper.swift */,
+				152349FF25B62D45001B8E33 /* CoordinateRow.swift */,
+				15C6147E25B7629F00C7D1E3 /* CoordinateList.swift */,
 				152349FA25B61EF7001B8E33 /* NARC.pdf */,
 				152349BA25B61E25001B8E33 /* TankerCoPirateApp.swift */,
 				152349F525B61EE3001B8E33 /* DocumentView.swift */,
@@ -109,6 +121,9 @@
 				152349BE25B61E27001B8E33 /* Assets.xcassets */,
 				152349C325B61E27001B8E33 /* Info.plist */,
 				152349C025B61E27001B8E33 /* Preview Content */,
+				15C6147125B66DFA00C7D1E3 /* ModelData.swift */,
+				15C6148325B76D6600C7D1E3 /* LocationTime.swift */,
+				15C6147925B67FC800C7D1E3 /* GPSCoordinate.swift */,
 			);
 			path = TankerCoPirate;
 			sourceTree = "<group>";
@@ -269,9 +284,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15234A0025B62D45001B8E33 /* CoordinateRow.swift in Sources */,
+				15C6147225B66DFA00C7D1E3 /* ModelData.swift in Sources */,
 				152349F125B61EB2001B8E33 /* PDFViewWrapper.swift in Sources */,
+				15C6147F25B7629F00C7D1E3 /* CoordinateList.swift in Sources */,
 				152349BD25B61E25001B8E33 /* ContentView.swift in Sources */,
+				15C6148425B76D6600C7D1E3 /* LocationTime.swift in Sources */,
 				152349BB25B61E25001B8E33 /* TankerCoPirateApp.swift in Sources */,
+				15C6147A25B67FC800C7D1E3 /* GPSCoordinate.swift in Sources */,
 				152349F625B61EE3001B8E33 /* DocumentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
